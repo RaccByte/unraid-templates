@@ -15,8 +15,8 @@
   <Repository>registry.hub.docker.com/library/postgres:18</Repository>
   <Support></Support>
   <WebUI/>
-  <Banner>https://github.com/raccbyte/unraid-templates/raw/master/images/PostgreSQL-banner.png</Banner>
-  <Icon>https://github.com/raccbyte/unraid-templates/raw/master/images/PostgreSQL-logo.png</Icon>
+  <Banner>https://github.com/RaccByte/unraid-templates/blob/main/images/PostgreSQL-banner.png?raw=true</Banner>
+  <Icon>https://github.com/RaccByte/unraid-templates/blob/main/images/PostgreSQL-logo.png?raw=true</Icon>
   <Privileged>false</Privileged>
   <Network Default="bridge">bridge</Network>
   <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)" Type="Variable" Display="always" Required="true" Mask="true"/>
