@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
-  <TemplateURL>https://github.com/raccbyte/unraid-templates/blob/master/PostgreSQL18.xml</TemplateURL>
+  <TemplateURL>https://github.com/RaccByte/unraid-templates/blob/main/PostgreSQL18.xml</TemplateURL>
   <Date>2026-01-30</Date>
   <Beta>False</Beta>
-  <Category>Network:Management Productivity: Tools:</Category>
+  <Category>Network:Management:Productivity:Tools</Category>
   <Name>PostgreSQL18</Name>
   <Project>https://www.postgresql.org/</Project>
   <Overview>
@@ -12,16 +12,17 @@
   </Overview>
   <Registry>https://registry.hub.docker.com/_/postgres/</Registry>
   <GitHub>https://github.com/docker-library/postgres</GitHub>
-  <Repository>registry.hub.docker.com/library/postgres:18</Repository>
+  <Repository>postgres:18</Repository>
   <Support></Support>
   <WebUI/>
   <Banner>https://github.com/RaccByte/unraid-templates/blob/main/images/PostgreSQL-banner.png?raw=true</Banner>
   <Icon>https://github.com/RaccByte/unraid-templates/blob/main/images/PostgreSQL-logo.png?raw=true</Icon>
   <Privileged>false</Privileged>
   <Network Default="bridge">bridge</Network>
-  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Initial superuser name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Initial database name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Type="PATH" Name="DATABASE STORAGE LOCATION" Target="/var/lib/postgresql" Default="/mnt/cache/appdata/postgresql18" Mode="rw" Display="always" Required="true" Description="PostgreSQL data storage location"/>
-  <Config Type="PORT" Name="POSTGRESQL PORT" Target="5432" Default="5432" Mode="tcp" Display="always-hide" Required="false" Description="PostgreSQL TCP connection port"/>
+  <Config Name="PostgreSQL Superuser Name" Target="POSTGRES_USER" Default="postgres" Mode="" Description="Variable: PostgreSQL Superuser Name" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PostgreSQL Superuser Password" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Variable: PostgreSQL Superuser Password" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="PostgreSQL Database Name" Target="POSTGRES_DB" Default="postgres" Mode="" Description="Variable: Initial PostgreSQL Database" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Timezone" Target="TZ" Default="America/Chicago" Description="Variable: Container Timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PostgreSQL Data Path" Target="/var/lib/postgresql" Default="/mnt/cache/postgresql18" Mode="rw" Description="Path: PostgreSQL Data Directory" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PostgreSQL Database Port" Target="5432" Default="5432" Mode="tcp" Description="Port: PostgreSQL Database TCP Port" Type="Port" Display="always" Required="true" Mask="false"/>
 </Container>
